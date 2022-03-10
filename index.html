@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Cifras y letras</title>
+
+</head>
+
+<body>
+    <div class="container mt-5">
+        <!-- Button trigger modal -->
+        
+            <i class="bi bi-info btn btn-warning font-weigth-bold rounded-circle"  style="font-size:25px;" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+        
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <h1 class="text-center">Corrector de palabras del Cifras y Letras</h1>
+                <div class="input-group my-3 col-12">
+                    <input type="text" id="mainLetters" readonly class="form-control">
+                </div>
+                <div class="row mb-3">
+                    <div class="col-6 d-grid gap-2">
+                        <button id="btn-vocal" class="btn btn-primary " onclick="pedirVocal()">Pedir Vocal</button>
+                    </div>
+                    <div class="col-6 d-grid gap-2">
+                        <button id="btn-consonant" class="btn btn-primary " onclick="pedirConsonante()">Pedir
+                            Consonante</button>
+                    </div>
+                </div>
+                <div class="col-12 d-grid gap-2 mb-3">
+                    <button id="btn-resolv" class="btn btn-primary " disabled onclick="juega()">Resolver</button>
+                </div>
+                <div>
+                    <ul id="words" class="list-group mb-3">
+                    </ul>
+                </div>
+                <div class="d-grid gap-2 col-6 mx-auto mx-auto">
+                    <button style="display: none;" id="btn-play-again" class="btn btn-primary btn-lg mb-3"
+                        onclick="cleanAll()">Jugar de nuevo</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-2">
+
+    </div>
+    </div>
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">¿En que consiste esta aplicación?</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            Tendrás que pedir vocales o consonantes y encontrar palabras que contengan dichas letras,
+            una vez quiera ver las palabras que contienen esas letras, pulsara el boton de resolver,
+            se debe pedir 8 letras
+        </div>
+      </div>
+    </div>
+  </div>`
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+<script src="./diccionario.js"></script>
+<script src="./scripts.js"></script>
+
+</html>
